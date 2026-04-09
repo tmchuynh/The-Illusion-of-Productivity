@@ -1,1 +1,3 @@
-Public Speaking\The Illusion of Productivity\.agents
+.agents/*
+node_modules/*
+.pptx-temp/*
