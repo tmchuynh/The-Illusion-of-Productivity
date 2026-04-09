@@ -426,8 +426,24 @@
   line-height: 1.5x;
 }
 
-.slide-7 .highlight-teal {
-  color: #5eead4;
+.slide-7 .main-headline {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 18px;
+  letter-spacing: -1.5px;
+}
+
+.slide-7 .sub-headline {
+  font-family: "Lora", serif;
+  font-size: 19px;
+  font-weight: 400;
+  font-style: italic;
+  color: #9ca3af;
+  line-height: 1.5;
+  margin-bottom: 28px;
+  max-width: 850px;
 }
 
 .slide-7 .pivot-container {
@@ -462,11 +478,6 @@
   line-height: 1.35;
   color: #f3f4f6;
   font-weight: 500;
-}
-
-.slide-7 .pivot-text strong {
-  color: #5eead4;
-  font-weight: 700;
 }
 
 .slide-7 .final-cta {
@@ -508,6 +519,51 @@
   opacity: 0.2;
 }
 
+.circle-accent {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: #1fb8aa;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.12;
+  top: 50%;
+  left: -150px;
+  pointer-events: none;
+}
+
+.circle-accent-2 {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background-color: #5eead4;
+  border-radius: 50%;
+  filter: blur(110px);
+  opacity: 0.08;
+  bottom: 20%;
+  right: -100px;
+  pointer-events: none;
+}
+
+.final-message {
+  background: linear-gradient(
+    135deg,
+    rgba(31, 184, 170, 0.1),
+    rgba(31, 41, 55, 0.5)
+  );
+  border: 2px solid rgba(31, 184, 170, 0.3);
+  border-radius: 16px;
+  padding: 24px 32px;
+  max-width: 1000px;
+}
+
+.final-text {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: white;
+}
+
 .key-takeaway-line {
   text-transform: uppercase;
   font-size: 12px;
@@ -527,4 +583,27 @@
   height: 2px;
   background-color: #1fb8aa;
   margin-right: 10px;
+}
+
+.footer {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  gap: 12px;
+}
+
+.thank-you {
+  font-size: 15px;
+  font-weight: 600;
+  color: #9ca3af;
+  letter-spacing: 0.3px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  background-color: #1fb8aa;
+  border-radius: 50%;
 }
