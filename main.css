@@ -3,7 +3,6 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f3f4f6;
   font-family: "Inter", sans-serif;
   overflow: hidden;
 }
@@ -18,13 +17,13 @@ body {
   overflow: hidden;
 }
 
-.accent-bar {
+/* .accent-bar {
   position: absolute;
   bottom: 0px;
   height: 20px;
   width: 100%;
   background-color: #1fb8aa;
-}
+} */
 
 .content-wrapper {
   flex: 1;
