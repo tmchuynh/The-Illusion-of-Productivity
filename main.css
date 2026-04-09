@@ -32,8 +32,10 @@ body {
   justify-content: center;
   padding-left: 120px;
   padding-right: 80px;
-  z-index: 10;
+  z-index: 20;
 }
+
+
 
 .highlight {
   color: #1fb8aa;

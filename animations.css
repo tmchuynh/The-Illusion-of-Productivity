@@ -9,19 +9,6 @@
 }
 
 /* Glow Effects (can't be done with standard Tailwind) */
-.slide-6 .glow-orb {
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background-color: #1fb8aa;
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.2;
-  bottom: -150px;
-  right: -150px;
-  pointer-events: none;
-  z-index: 10;
-}
 
 .slide-1 .slide-container {
   background-color: #111827;
@@ -43,15 +30,6 @@
   line-height: 1.4;
   max-width: 900px;
   margin-bottom: 60px;
-}
-
-
-
-.slide-6 .glow-orb {
-  filter: blur(130px);
-  opacity: 0.15;
-  bottom: -180px;
-  right: -120px;
 }
 
 /* Slide 2 - Content area layout */
@@ -357,7 +335,8 @@
 }
 
 /* Slide 6 Styles */
-.slide-6 .slide-container {
+.slide-6 .slide-container,
+.slide-7 .slide-container {
   background-color: #111827;
   position: relative;
 }
@@ -387,31 +366,21 @@
   gap: 28px;
 }
 
-.slide-6 .kicker {
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 2.4px;
-  color: #5eead4;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.slide-6 .inner-wrap .grid > div {
+  background-color: rgba(31, 41, 55, 0.7);
+  border: 1px solid rgba(94, 234, 212, 0.2);
+  border-radius: 12px;
+  padding: 18px 22px;
+  backdrop-filter: blur(10px);
 }
 
-.slide-6 .h- Dark background with cards */ .slide-6 .slide-container {
-  background-color: #111827;
-  position: relative;
-}
-
-.slide-6 .inner-wrap {
-  position: relative;
-  z-index: 10;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 45px 65px;
-  gap: 28px;
+.slide-6 .inner-wrap .grid .h-12 {
+ background-color: oklch(71.08% 0.12717 182.261 / 0.342);
+  color: #f9ffff;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 6px 12px;
 }
 
 .slide-6 .kicker {
@@ -442,7 +411,7 @@
   font-size: 19px;
   color: #9ca3af;
   max-width: 900px;
-  line-height: 1.5x;
+  line-height: 1.5;
 }
 
 .slide-7 .main-headline {
@@ -518,6 +487,16 @@
   justify-content: center;
   gap: 16px;
 }
+
+   .slide-7    .bg-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            opacity: 0.08;
+        }
 
 .slide-7 .cta-bullet {
   color: #5eead4;
