@@ -8,8 +8,6 @@
   padding: 0;
 }
 
-/* Glow Effects (can't be done with standard Tailwind) */
-
 .slide-1 .slide-container {
   background-color: #111827;
 }
@@ -51,7 +49,6 @@
   border-radius: 14px;
   border: 1px solid #e5e7eb;
   padding: 32px 28px;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
 }
 
 .slide-3 .primary-claim {
@@ -93,7 +90,6 @@
   border-radius: 14px;
   border: 1px solid #e5e7eb;
   padding: 24px 22px;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
 }
 
 .slide-4 .section-title {
@@ -375,7 +371,7 @@
 }
 
 .slide-6 .inner-wrap .grid .h-12 {
- background-color: oklch(71.08% 0.12717 182.261 / 0.342);
+  background-color: oklch(71.08% 0.12717 182.261 / 0.342);
   color: #f9ffff;
   font-size: 14px;
   font-weight: 600;
@@ -489,15 +485,15 @@
   gap: 16px;
 }
 
-   .slide-7    .bg-svg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 10;
-            opacity: 0.08;
-        }
+.slide-7 .bg-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0.08;
+}
 
 .slide-7 .cta-bullet {
   color: #5eead4;
