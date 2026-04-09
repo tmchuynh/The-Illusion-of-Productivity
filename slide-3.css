@@ -1,0 +1,29 @@
+/* ===========================
+   SLIDE 3: PANEL STYLES
+   =========================== */
+
+.slide-3 .panel {
+  background-color: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  padding: 32px 28px;
+}
+
+.slide-3 .primary-claim {
+  border-left: 6px solid #1fb8aa;
+  border-radius: 0 12px 12px 0;
+  padding-left: 22px;
+  max-height: 90%;
+}
+
+.slide-3 .big-text {
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.slide-3 .subtext {
+  font-size: 19px;
+  color: #4b5563;
+  line-height: 1.55;
+  margin-bottom: 24px;
+}

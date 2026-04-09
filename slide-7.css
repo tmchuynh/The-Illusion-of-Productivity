@@ -1,0 +1,109 @@
+/* ===========================
+   SLIDE 7: FINAL SLIDE
+   =========================== */
+
+.slide-7 .slide-container {
+  background-color: #111827;
+  position: relative;
+}
+
+.slide-7 .content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  padding: 40px 80px;
+  text-align: center;
+}
+
+.slide-7 .main-headline {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 18px;
+  letter-spacing: -1.5px;
+  color: white;
+}
+
+.slide-7 .sub-headline {
+  font-family: "Lora", serif;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: italic;
+  color: #9ca3af;
+  line-height: 1.5;
+  margin-bottom: 28px;
+  max-width: 950px;
+}
+
+.slide-7 .pivot-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  position: relative;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.slide-7 .pivot-box {
+  background-color: rgba(31, 41, 55, 0.7);
+  border: 1px solid rgba(94, 234, 212, 0.2);
+  border-radius: 12px;
+  padding: 18px 22px;
+  backdrop-filter: blur(10px);
+}
+
+.slide-7 .pivot-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  color: #5eead4;
+  margin-bottom: 8px;
+}
+
+.slide-7 .pivot-text {
+  font-size: 15px;
+  line-height: 1.35;
+  color: #f3f4f6;
+  font-weight: 500;
+}
+
+.slide-7 .final-cta {
+  background-color: rgba(31, 41, 55, 0.9);
+  border: 1px solid rgba(94, 234, 212, 0.3);
+  border-radius: 16px;
+  padding: 20px 32px;
+  width: 100%;
+  max-width: 1100px;
+  backdrop-filter: blur(10px);
+}
+
+.slide-7 .cta-text {
+  font-size: 16px;
+  color: #d1d5db;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.slide-7 .bg-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0.08;
+}
+
+.slide-7 .cta-bullet {
+  color: #5eead4;
+  font-size: 8px;
+}

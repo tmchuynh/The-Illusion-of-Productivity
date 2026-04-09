@@ -1,0 +1,15 @@
+/* ===========================
+   SLIDE 2: CONTENT AREA LAYOUT
+   =========================== */
+
+.slide-2 .big-text {
+  line-height: 1.2;
+  padding-bottom: 20px;
+}
+
+.slide-2 .follow-up {
+  font-size: 24px;
+  color: #4b5563;
+  font-style: italic;
+  font-family: "Lora", serif;
+}

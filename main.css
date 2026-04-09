@@ -1,5 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap");
 
+/* ===========================
+   REVEAL.JS BASE OVERRIDES
+   =========================== */
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  height: 100%;
+  padding: 0;
+}
+
+/* ===========================
+   GLOBAL STYLES
+   =========================== */
 body {
   margin: 0;
   padding: 0;
@@ -17,14 +32,19 @@ body {
   overflow: hidden;
 }
 
-/* .accent-bar {
+/* Commented out originally - keeping for reference
+.accent-bar {
   position: absolute;
   bottom: 0px;
   height: 20px;
   width: 100%;
   background-color: #1fb8aa;
-} */
+}
+*/
 
+/* ===========================
+   CONTENT WRAPPERS
+   =========================== */
 .content-wrapper {
   flex: 1;
   display: flex;
@@ -35,19 +55,20 @@ body {
   z-index: 20;
 }
 
-.slide-7 .content-wrapper {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-  padding: 40px 80px;
-  text-align: center;
-}
-
+/* ===========================
+   UTILITY CLASSES
+   =========================== */
 .highlight {
   color: #1fb8aa;
+}
+
+.big-text {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 46px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.1;
+  letter-spacing: -1.2px;
 }
 
 .meta-info {
@@ -61,15 +82,9 @@ body {
   letter-spacing: 1px;
 }
 
-.big-text {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 46px;
-  font-weight: 700;
-  color: #111827;
-  line-height: 1.1;
-  letter-spacing: -1.2px;
-}
-
+/* ===========================
+   DECORATIVE ELEMENTS
+   =========================== */
 .decorative-shape {
   position: absolute;
   right: -200px;
@@ -92,6 +107,35 @@ body {
   z-index: 20;
 }
 
+.circle-accent {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: #1fb8aa;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.12;
+  top: 50%;
+  left: -150px;
+  pointer-events: none;
+}
+
+.circle-accent-2 {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background-color: #5eead4;
+  border-radius: 50%;
+  filter: blur(110px);
+  opacity: 0.08;
+  bottom: 20%;
+  right: -100px;
+  pointer-events: none;
+}
+
+/* ===========================
+   HEADER & CONTENT AREAS
+   =========================== */
 .header-bar {
   height: 100px;
   padding: 0 80px;
@@ -129,4 +173,83 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* ===========================
+   SHARED PANEL STYLES
+   =========================== */
+.panel {
+  background-color: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  padding: 32px 28px;
+}
+
+/* ===========================
+   SHARED MESSAGE STYLES
+   =========================== */
+.final-message {
+  background: linear-gradient(
+    135deg,
+    rgba(31, 184, 170, 0.1),
+    rgba(31, 41, 55, 0.5)
+  );
+  border: 2px solid rgba(31, 184, 170, 0.3);
+  border-radius: 16px;
+  padding: 24px 32px;
+  max-width: 1000px;
+}
+
+.final-text {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: white;
+}
+
+.key-takeaway-line {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #1fb8aa;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.key-takeaway-line::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: #1fb8aa;
+  margin-right: 10px;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+.footer {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  gap: 12px;
+}
+
+.thank-you {
+  font-size: 15px;
+  font-weight: 600;
+  color: #9ca3af;
+  letter-spacing: 0.3px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  background-color: #1fb8aa;
+  border-radius: 50%;
 }

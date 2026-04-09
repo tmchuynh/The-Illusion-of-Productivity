@@ -1,0 +1,83 @@
+/* ===========================
+   SLIDE 5: SPLIT LAYOUT WITH GLOW
+   =========================== */
+
+.slide-5 .slide-container {
+  flex-direction: row;
+}
+
+.slide-5 .comparison-col {
+  width: 50%;
+  background-color: #111827;
+  padding: 52px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  border-left: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.slide-5 .comparison-col::before {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 250px;
+  height: 250px;
+  background-color: #1fb8aa;
+  filter: blur(90px);
+  opacity: 0.15;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.slide-5 .comparison-heading {
+  font-size: 11px;
+  font-weight: 800;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  position: relative;
+  z-index: 10;
+}
+
+.slide-5 .comparison-row {
+  position: relative;
+  z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 14px;
+  background-color: rgba(31, 41, 55, 0.7);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.slide-5 .comparison-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #5eead4;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  margin-bottom: 4px;
+}
+
+.slide-5 .before-text {
+  font-size: 15px;
+  color: #9ca3af;
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+.slide-5 .after-text {
+  font-size: 16px;
+  color: #f3f4f6;
+  font-weight: 600;
+}
+
+.slide-5 .arrow-icon {
+  color: #5eead4;
+  font-size: 18px;
+  flex-shrink: 0;
+}
