@@ -19,5 +19,8 @@
     "pptxgenjs": "^4.0.1",
     "reveal.js": "^6.0.0",
     "tailwindcss": "^4.2.2"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
   }
 }
