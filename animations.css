@@ -1,5 +1,4 @@
-
-
+/* Reveal.js Base Overrides */
 .reveal .slides {
   text-align: left;
 }
@@ -9,30 +8,9 @@
   padding: 0;
 }
 
-/* Slide 1 Styles */
-.slide-1 .slide-container {
-  background-color: #111827;
-}
-
-.slide-1 .main-title {
-  font-size: 96px;
-  font-weight: 900;
-  line-height: 1.1;
-  color: #f9fafb;
-  letter-spacing: -2px;
-  margin-bottom: 24px;
-}
-
-.slide-1 .subtitle {
-  font-size: 32px;
-  font-weight: 400;
-  color: #9ca3af;
-  line-height: 1.4;
-  max-width: 900px;
-  margin-bottom: 60px;
-}
-
-.slide-1 .glow-orb {
+/* Glow Effects (can't be done with standard Tailwind) */
+.slide-1 .glow-orb,
+.slide-6 .glow-orb {
   position: absolute;
   width: 500px;
   height: 500px;
@@ -43,17 +21,21 @@
   bottom: -150px;
   right: -150px;
   pointer-events: none;
+  z-index: 10;
 }
 
-/* Slide 2 Styles */
-.slide-2 .content-area {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 10px 80px;
+.slide-1 .slide-container {
+  background-color: #111827;
 }
 
+.slide-6 .glow-orb {
+  filter: blur(130px);
+  opacity: 0.15;
+  bottom: -180px;
+  right: -120px;
+}
+
+/* Slide 2 - Content area layout */
 .slide-2 .big-text {
   line-height: 1.2;
   padding-bottom: 20px;
@@ -64,65 +46,9 @@
   color: #4b5563;
   font-style: italic;
   font-family: "Lora", serif;
-  margin-top: 15px;
 }
 
-.slide-2 .answer-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-
-.slide-2 .answer-card {
-  background-color: white;
-  border-radius: 16px;
-  padding: 32px;
-  border: 2px solid #e5e7eb;
-  transition: all 0.3s ease;
-  display: flex;
-  gap: 25px;
-  align-items: center;
-}
-
-.slide-2 .answer-card:hover {
-  border-color: #1fb8aa;
-  box-shadow: 0 8px 24px rgba(31, 184, 170, 0.15);
-}
-
-.slide-2 .icon-circle {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background-color: #f0fdfc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.slide-2 .icon-circle i {
-  font-size: 28px;
-  color: #1fb8aa;
-}
-
-.slide-2 .card-content h3 {
-  font-size: 22px;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 8px;
-}
-
-.slide-2 .card-content p {
-  font-size: 16px;
-  color: #6b7280;
-  line-height: 1.5;
-}
-
-/* Slide 3 Styles */
-.slide-3 .content-area {
-  flex-direction: column;
-}
-
+/* Slide 3 - Panel styles */
 .slide-3 .panel {
   background-color: #ffffff;
   border-radius: 14px;
@@ -150,38 +76,7 @@
   margin-bottom: 24px;
 }
 
-.slide-3 .moment-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 24px;
-}
-
-.slide-3 .moment-card {
-  background-color: #f9fafb;
-  border-radius: 10px;
-  padding: 18px;
-  border: 1px solid #e5e7eb;
-  min-height: 150px;
-}
-
-.slide-3 .moment-label {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  font-weight: 800;
-  color: #1fb8aa;
-  margin-bottom: 8px;
-}
-
-.slide-3 .moment-text {
-  font-size: 15px;
-  color: #374151;
-  line-height: 1.45;
-  font-weight: 600;
-}
-
-/* Slide 4 Styles */
+/* Slide 4 - Schedule Grid (complex layout) */
 .slide-4 .content-area {
   display: grid;
   grid-template-columns: 3fr 2fr;
@@ -361,51 +256,9 @@
   border-left-color: #9ca3af;
 }
 
-/* Slide 5 Styles */
+/* Slide 5 - Split layout with pseudo-element glow */
 .slide-5 .slide-container {
   flex-direction: row;
-}
-
-.slide-5 .quote-col {
-  width: 50%;
-  padding: 60px 64px;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-}
-
-.slide-5 .col-kicker {
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 2.2px;
-  color: #1fb8aa;
-}
-
-.slide-5 .big-text {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 46px;
-  font-weight: 700;
-  color: #111827;
-  line-height: 1.1;
-  letter-spacing: -1.2px;
-  max-width: 550px;
-}
-
-.slide-5 .quote-rule {
-  width: 48px;
-  height: 3px;
-  background-color: #1fb8aa;
-  border-radius: 2px;
-}
-
-.slide-5 .quote-body {
-  font-size: 17px;
-  color: #4b5563;
-  line-height: 1.6;
-  max-width: 540px;
 }
 
 .slide-5 .comparison-col {
@@ -526,6 +379,33 @@
   gap: 8px;
 }
 
+.slide-6 .h- Dark background with cards */ .slide-6 .slide-container {
+  background-color: #111827;
+  position: relative;
+}
+
+.slide-6 .inner-wrap {
+  position: relative;
+  z-index: 10;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 45px 65px;
+  gap: 28px;
+}
+
+.slide-6 .kicker {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  color: #5eead4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .slide-6 .headline {
   font-family: "Space Grotesk", sans-serif;
   font-size: 46px;
@@ -543,98 +423,7 @@
   font-size: 19px;
   color: #9ca3af;
   max-width: 900px;
-  line-height: 1.55;
-}
-
-.slide-6 .cards-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.slide-6 .impact-card {
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 18px;
-  background-color: rgba(31, 41, 55, 0.75);
-  padding: 28px 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  backdrop-filter: blur(6px);
-  transition: border-color 0.25s;
-}
-
-.slide-6 .impact-card:hover {
-  border-color: rgba(31, 184, 170, 0.45);
-}
-
-.slide-6 .card-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background-color: rgba(94, 234, 212, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slide-6 .card-icon i {
-  color: #5eead4;
-  font-size: 22px;
-}
-
-.slide-6 .card-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #f9fafb;
-}
-
-.slide-6 .card-desc {
-  font-size: 15px;
-  color: #9ca3af;
-  line-height: 1.5;
-}
-
-.slide-6 .card-desc strong {
-  color: #d1d5db;
-  font-weight: 600;
-}
-
-/* Slide 7 Styles */
-.slide-7 .slide-container {
-  background-color: #111827;
-  color: white;
-}
-
-.slide-7 .content-wrapper {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-  padding: 40px 80px;
-  text-align: center;
-}
-
-.slide-7 .main-headline {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 1.05;
-  margin-bottom: 18px;
-  letter-spacing: -1.5px;
-}
-
-.slide-7 .sub-headline {
-  font-family: "Lora", serif;
-  font-size: 19px;
-  font-weight: 400;
-  font-style: italic;
-  color: #9ca3af;
-  line-height: 1.5;
-  margin-bottom: 28px;
-  max-width: 850px;
+  line-height: 1.5x;
 }
 
 .slide-7 .highlight-teal {
@@ -703,4 +492,39 @@
 .slide-7 .cta-bullet {
   color: #5eead4;
   font-size: 8px;
+}
+
+/* Slide 4 - Highlight box pseudo-elements */
+.highlight-box-glow::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background-color: #1fb8aa;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.2;
+}
+
+.key-takeaway-line {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #1fb8aa;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.key-takeaway-line::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: #1fb8aa;
+  margin-right: 10px;
 }
