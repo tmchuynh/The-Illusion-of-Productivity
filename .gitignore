@@ -1,3 +1,13 @@
-.agents/*
+# Dependencies
 node_modules/*
+
+# Build outputs
 .pptx-temp/*
+*.pptx
+
+# Skills (not needed for presentation)
+.agents/*
+
+# Optional: Uncomment to exclude original slide files
+# slide_*.html
+# build-pptx.js
