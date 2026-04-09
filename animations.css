@@ -9,7 +9,6 @@
 }
 
 /* Glow Effects (can't be done with standard Tailwind) */
-.slide-1 .glow-orb,
 .slide-6 .glow-orb {
   position: absolute;
   width: 500px;
@@ -27,6 +26,26 @@
 .slide-1 .slide-container {
   background-color: #111827;
 }
+
+.slide-1 .main-title {
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #f9fafb;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+
+.slide-1 .subtitle {
+  font-size: 32px;
+  font-weight: 400;
+  color: #9ca3af;
+  line-height: 1.4;
+  max-width: 900px;
+  margin-bottom: 60px;
+}
+
+
 
 .slide-6 .glow-orb {
   filter: blur(130px);
