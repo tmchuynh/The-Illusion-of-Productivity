@@ -9,10 +9,10 @@
     <!-- Reveal.js CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/black.css">
 
     <!-- External Dependencies -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Lora:ital,wght@1,400;1,500;1,600&family=Space+Grotesk:wght@400;500;700&display=swap"
         rel="stylesheet" />
@@ -20,7 +20,8 @@
 
     <!-- Custom CSS -->
     <link href="./main.css" rel="stylesheet" />
-    <link href="./reveal.css" rel="stylesheet" />
+    <link href="./animations.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -31,10 +32,10 @@
             <section class="slide-1">
                 <div class="slide-container">
                     <div class="content-wrapper">
-                        <h1 class="main-title fragment fade-in">
+                        <h1 class="main-title">
                             The Illusion of<br />Productivity
                         </h1>
-                        <p class="subtitle fragment fade-in" data-fragment-index="1">
+                        <p class="subtitle">
                             The moment you realize being busy isn't the same as moving forward
                         </p>
                     </div>
@@ -50,17 +51,21 @@
                         <h1 class="header-title">The Universal Experience</h1>
                     </div>
                     <div class="content-area">
-                        <div class="big-text">
-                            You've <span class="highlight">worked all day</span> and found yourself wondering what you
-                            actually accomplished.
+                        <div class="">
+                            <div class="big-text">
+                                You've <span class="highlight">worked all day</span> and found yourself wondering what
+                                you
+                                actually accomplished.
+                            </div>
+                            <p class="follow-up fragment fade-in" data-fragment-index="1">
+                                We've all felt it. That exhaustion that comes from being busy... but somehow, nothing
+                                really
+                                moved forward.
+                            </p>
                         </div>
-                        <p class="follow-up fragment fade-in">
-                            We've all felt it. That exhaustion that comes from being busy... but somehow, nothing really
-                            moved forward.
-                        </p>
 
                         <div class="answer-grid">
-                            <div class="answer-card fragment fade-in" data-fragment-index="1">
+                            <div class="answer-card fragment fade-in" data-fragment-index="2">
                                 <div class="icon-circle">
                                     <i class="fas fa-clock"></i>
                                 </div>
@@ -71,7 +76,7 @@
                                 </div>
                             </div>
 
-                            <div class="answer-card fragment fade-in" data-fragment-index="2">
+                            <div class="answer-card fragment fade-in" data-fragment-index="3">
                                 <div class="icon-circle">
                                     <i class="fas fa-circle-notch"></i>
                                 </div>
@@ -81,7 +86,7 @@
                                 </div>
                             </div>
 
-                            <div class="answer-card fragment fade-in" data-fragment-index="3">
+                            <div class="answer-card fragment fade-in" data-fragment-index="4">
                                 <div class="icon-circle">
                                     <i class="fas fa-sync-alt"></i>
                                 </div>
@@ -92,7 +97,7 @@
                                 </div>
                             </div>
 
-                            <div class="answer-card fragment fade-in" data-fragment-index="4">
+                            <div class="answer-card fragment fade-in" data-fragment-index="5">
                                 <div class="icon-circle">
                                     <i class="fas fa-lightbulb"></i>
                                 </div>
