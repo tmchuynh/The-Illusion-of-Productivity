@@ -10,8 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:pptx": "node build-pptx.js",
     "install:chromium": "playwright install chromium",
-    "serve": "npx http-server . -p 8080 -o",
-    "dev": "npx http-server . -p 8080 -o"
+    "serve": "npx http-server . -p 8080 -o -c-1",
+    "dev": "npx http-server . -p 8080 -o -c-1"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.2.2",
