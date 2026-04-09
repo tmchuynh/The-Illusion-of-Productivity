@@ -1,0 +1,21 @@
+{
+  "name": "the-illusion-of-productivity",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "build-pptx.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:pptx": "node build-pptx.js",
+    "install:chromium": "playwright install chromium"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "playwright": "^1.58.2",
+    "pptxgenjs": "^4.0.1",
+    "tailwindcss": "^4.2.2"
+  },
+  "devDependencies": {}
+}
