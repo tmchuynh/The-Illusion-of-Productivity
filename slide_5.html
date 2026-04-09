@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Shift - When It Clicks</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Lora:ital,wght@1,400;1,600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="./main.css" rel="stylesheet" />
+    <style>
+        .slide-container {
+            flex-direction: row;
+        }
+
+        .quote-col {
+            width: 50%;
+            padding: 60px 64px;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .col-kicker {
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2.2px;
+            color: #1fb8aa;
+        }
+
+        .big-text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 46px;
+            font-weight: 700;
+            color: #111827;
+            line-height: 1.1;
+            letter-spacing: -1.2px;
+            max-width: 550px;
+        }
+
+        .quote-rule {
+            width: 48px;
+            height: 3px;
+            background-color: #1fb8aa;
+            border-radius: 2px;
+        }
+
+        .quote-body {
+            font-size: 17px;
+            color: #4b5563;
+            line-height: 1.6;
+            max-width: 540px;
+        }
+
+        .comparison-col {
+            width: 50%;
+            background-color: #111827;
+            padding: 52px 44px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+            border-left: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .comparison-col::before {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            right: -40px;
+            width: 250px;
+            height: 250px;
+            background-color: #1fb8aa;
+            filter: blur(90px);
+            opacity: 0.15;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .comparison-heading {
+            font-size: 11px;
+            font-weight: 800;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 2.2px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .comparison-row {
+            position: relative;
+            z-index: 10;
+            border: 1px solid rgba(255, 255, 255, 0.11);
+            border-radius: 14px;
+            background-color: rgba(31, 41, 55, 0.7);
+            padding: 20px;
+            transition: border-color 0.2s;
+        }
+
+        .comparison-row:hover {
+            border-color: rgba(31, 184, 170, 0.4);
+        }
+
+        .comp-label {
+            font-size: 11px;
+            font-weight: 800;
+            color: #5eead4;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .comp-content {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .comp-before, .comp-after {
+            font-size: 15px;
+            color: #d1d5db;
+            line-height: 1.45;
+        }
+
+        .comp-before {
+            text-align: right;
+            opacity: 0.7;
+            text-decoration: line-through;
+        }
+
+        .comp-after {
+            font-weight: 700;
+            color: #f3f4f6;
+        }
+
+        .comp-arrow {
+            color: #1fb8aa;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="quote-col">
+            <p class="col-kicker">The Turning Point</p>
+            <h2 class="big-text">
+                And then, one day,<br />
+                something <span class="highlight">shifts</span>.
+            </h2>
+            <div class="quote-rule"></div>
+            <p class="quote-body">
+                Maybe it happens after you fail an exam you studied "so hard" for. Maybe when you watch someone else succeed while putting in half the hours. Or maybe when you finally stop and ask yourself: <em><strong>What am I actually doing?</strong></em>
+            </p>
+            
+            <div style="background-color: #f0fdfc; border-left: 4px solid #1fb8aa; border-radius: 0 12px 12px 0; padding: 20px 24px; margin-top: 24px;">
+                <p style="font-size: 15px; color: #0f766e; line-height: 1.6; margin-bottom: 12px;">
+                    <strong>Here's the thing:</strong>
+                </p>
+                <p style="font-size: 15px; color: #374151; line-height: 1.65;">
+                    I can't tell you how to get there. I can't give you a step-by-step guide to make it happen. One day, you'll either look back and realize you've already passed that point in your life—that the shift already happened—or you'll be <strong>extremely lucky</strong> to recognize it while it's occurring.
+                </p>
+                <p style="font-size: 14px; color: #6b7280; line-height: 1.6; margin-top: 12px; font-style: italic;">
+                    But when it does, you'll know. Everything changes.
+                </p>
+            </div>
+        </div>
+
+        <div class="comparison-col">
+            <p class="comparison-heading">Before vs. After</p>
+
+            <div class="comparison-row">
+                <div class="comp-label">The Questions Change</div>
+                <div class="comp-content">
+                    <div class="comp-before">"Did I work hard enough?"</div>
+                    <div class="comp-arrow"><i class="fa-arrow-right fas"></i></div>
+                    <div class="comp-after">"Did I get to where I wanted to be?"</div>
+                </div>
+            </div>
+
+            <div class="comparison-row">
+                <div class="comp-label">The Behavior Changes</div>
+                <div class="comp-content">
+                    <div class="comp-before">Rewriting notes for hours</div>
+                    <div class="comp-arrow"><i class="fa-arrow-right fas"></i></div>
+                    <div class="comp-after">Going straight to practice problems</div>
+                </div>
+            </div>
+
+
+            <div class="comparison-row">
+                <div class="comp-label">The Comfort Zone Shifts</div>
+                <div class="comp-content">
+                    <div class="comp-before">Avoiding failure at all costs</div>
+                    <div class="comp-arrow"><i class="fa-arrow-right fas"></i></div>
+                    <div class="comp-after">Using failure as feedback</div>
+                </div>
+            </div>
+
+            <div class="comparison-row">
+                <div class="comp-label">The Identity Changes</div>
+                <div class="comp-content">
+                    <div class="comp-before">"I'm someone who tries hard"</div>
+                    <div class="comp-arrow"><i class="fa-arrow-right fas"></i></div>
+                    <div class="comp-after">"I'm someone who produces results"</div>
+                </div>
+            </div>
+
+            <div class="comparison-row">
+                <div class="comp-label">The Key Insight</div>
+                <div class="comp-content">
+                    <div class="comp-before">Measuring input</div>
+                    <div class="comp-arrow"><i class="fa-arrow-right fas"></i></div>
+                    <div class="comp-after">Measuring output</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

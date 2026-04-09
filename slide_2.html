@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Question</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Lora:ital,wght@1,400;1,600&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="./main.css" rel="stylesheet" />
+    <style>
+        .content-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px 80px;
+        }
+
+        .big-text {
+            line-height: 1.2;
+            margin: -30px 0;
+        }
+
+        .follow-up {
+            font-size: 24px;
+            color: #4b5563;
+            font-style: italic;
+            font-family: 'Lora', serif;
+        }
+
+        .answer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .answer-card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 32px;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .answer-card:hover {
+            border-color: #1fb8aa;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(31, 184, 170, 0.15);
+        }
+
+        .answer-icon {
+            width: 52px;
+            height: 52px;
+            background-color: #f0fdfc;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1fb8aa;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .answer-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 12px;
+        }
+
+        .answer-desc {
+            font-size: 16px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <div class="header-bar">
+            <h1 class="header-title">The Universal Experience</h1>
+        </div>
+
+        <div class="content-area">
+            <h1 class="big-text">
+                You've worked <span class="highlight">all day</span> and found yourself wondering what you actually accomplished.
+            </h1>
+            <div class="follow-up">
+                We've all felt it. That exhaustion that comes from being busy... but somehow, nothing really moved forward.
+            </div>
+
+            <div class="answer-grid">
+                <div class="answer-card">
+                    <div class="answer-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div>
+                        <div class="answer-title">You Were Busy</div>
+                        <div class="answer-desc">
+                            Your calendar was full. Your to-do list got checked off. You earned that exhaustion.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="answer-card">
+                    <div class="answer-icon">
+                        <i class="fas fa-circle-notch"></i>
+                    </div>
+                    <div>
+                        <div class="answer-title">But Not Productive</div>
+                        <div class="answer-desc">
+                            At the end of the day, you can't point to any real progress. Just... motion.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="answer-card">
+                    <div class="answer-icon">
+                        <i class="fas fa-repeat"></i>
+                    </div>
+                    <div>
+                        <div class="answer-title">It's a Pattern</div>
+                        <div class="answer-desc">
+                            And it keeps happening. Week after week. The harder you work, the less you seem to move.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="answer-card">
+                    <div class="answer-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div>
+                        <div class="answer-title">Until One Day...</div>
+                        <div class="answer-desc">
+                            Something shifts. You stop confusing activity with progress. And everything changes.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

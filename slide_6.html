@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Why This Moment Is Special</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Lora:ital,wght@1,400;1,600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="./main.css" rel="stylesheet" />
+    <style>
+        .slide-container {
+            background-color: #111827;
+            position: relative;
+        }
+
+        .grid-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            opacity: 0.055;
+        }
+
+        .glow-orb {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background-color: #1fb8aa;
+            border-radius: 50%;
+            filter: blur(130px);
+            opacity: 0.15;
+            bottom: -180px;
+            right: -120px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .inner-wrap {
+            position: relative;
+            z-index: 10;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 45px 65px;
+            gap: 28px;
+        }
+
+        .kicker {
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2.4px;
+            color: #5eead4;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .headline {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 46px;
+            font-weight: 700;
+            color: #f9fafb;
+            line-height: 1.05;
+            letter-spacing: -1.4px;
+        }
+
+        .headline .accent {
+            color: #5eead4;
+        }
+
+        .subhead {
+            font-size: 19px;
+            color: #9ca3af;
+            max-width: 900px;
+            line-height: 1.55;
+        }
+
+        .cards-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .impact-card {
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 18px;
+            background-color: rgba(31, 41, 55, 0.75);
+            padding: 28px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            backdrop-filter: blur(6px);
+            transition: border-color 0.25s;
+        }
+
+        .impact-card:hover {
+            border-color: rgba(31, 184, 170, 0.45);
+        }
+
+        .card-icon-wrap {
+            width: 44px;
+            height: 44px;
+            background-color: rgba(31, 184, 170, 0.15);
+            border-radius: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #5eead4;
+        }
+
+        .card-title {
+            font-size: 21px;
+            font-weight: 800;
+            color: #f3f4f6;
+            line-height: 1.2;
+        }
+
+        .card-body {
+            font-size: 15px;
+            color: #d1d5db;
+            line-height: 1.55;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <svg class="grid-overlay" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <defs>
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+        <div class="glow-orb"></div>
+
+        <div class="inner-wrap">
+            <p class="kicker">
+                <i class="fas fa-star"></i>
+                Why This Moment Matters
+            </p>
+            <h1 class="headline">
+                This shift isn't just about school or work.<br />
+                It's about <span class="accent">who you're becoming</span>.
+            </h1>
+            <p class="subhead">
+                This is the skill that separates people who stay stuck from people who keep growing: the ability to distinguish between activity and progress, between motion and movement, between being busy and being effective.
+            </p>
+            
+            <div class="cards-row">
+                <div class="impact-card">
+                    <div class="card-icon-wrap">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="card-title">How You Value Time</div>
+                    <div class="card-body">
+                        Your time becomes <strong>precious, finite, not to be wasted</strong> on activities that don't move you forward. You start protecting your energy for what matters.
+                    </div>
+                </div>
+
+                <div class="impact-card">
+                    <div class="card-icon-wrap">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="card-title">How You Define Success</div>
+                    <div class="card-body">
+                        Success becomes about <strong>growth achieved, not hours logged</strong>. You stop celebrating effort without results and start celebrating actual progress.
+                    </div>
+                </div>
+
+                <div class="impact-card">
+                    <div class="card-icon-wrap">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="card-title">How You See Failure</div>
+                    <div class="card-body">
+                        Failure transforms from something to avoid into <strong>valuable feedback</strong>. You embrace discomfort because that's where real growth happens.
+                    </div>
+                </div>
+
+                <div class="impact-card">
+                    <div class="card-icon-wrap">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="card-title">What You See Everywhere</div>
+                    <div class="card-body">
+                        Once you have it, <strong>you can't unknow it</strong>. You'll see colleagues staying late but producing little. Meetings that go nowhere. People posting about hustle but never showing results.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

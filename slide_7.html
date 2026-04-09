@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Closing - Celebrate the Shift</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@1,400;1,500&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="./main.css" rel="stylesheet" />
+    <style>
+        .slide-container {
+            background-color: #111827;
+            color: white;
+        }
+
+        .bg-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.08;
+        }
+
+        .content-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            padding: 40px 80px;
+            text-align: center;
+        }
+
+        .main-headline {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 1.05;
+            margin-bottom: 18px;
+            letter-spacing: -1.5px;
+        }
+
+        .sub-headline {
+            font-family: 'Lora', serif;
+            font-size: 19px;
+            font-weight: 400;
+            font-style: italic;
+            color: #9ca3af;
+            line-height: 1.5;
+            margin-bottom: 28px;
+            max-width: 850px;
+        }
+
+        .highlight-teal {
+            color: #5eead4;
+        }
+
+        .pivot-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            position: relative;
+            margin-bottom: 24px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .pivot-box {
+            background-color: rgba(31, 41, 55, 0.7);
+            border: 1px solid rgba(94, 234, 212, 0.2);
+            border-radius: 12px;
+            padding: 18px 22px;
+            backdrop-filter: blur(10px);
+        }
+
+        .pivot-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+            color: #5eead4;
+            margin-bottom: 8px;
+        }
+
+        .pivot-text {
+            font-size: 15px;
+            line-height: 1.35;
+            color: #f3f4f6;
+            font-weight: 500;
+        }
+
+        .pivot-text strong {
+            color: #5eead4;
+            font-weight: 700;
+        }
+
+        .final-message {
+            background: linear-gradient(135deg, rgba(31, 184, 170, 0.1), rgba(31, 41, 55, 0.5));
+            border: 2px solid rgba(31, 184, 170, 0.3);
+            border-radius: 16px;
+            padding: 24px 32px;
+            max-width: 1000px;
+        }
+
+        .final-text {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.35;
+            color: white;
+        }
+
+        .circle-accent {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-color: #1fb8aa;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.12;
+            top: 50%;
+            left: -150px;
+            pointer-events: none;
+        }
+
+        .circle-accent-2 {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background-color: #5eead4;
+            border-radius: 50%;
+            filter: blur(110px);
+            opacity: 0.08;
+            bottom: 20%;
+            right: -100px;
+            pointer-events: none;
+        }
+
+        .footer {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            gap: 12px;
+        }
+
+        .thank-you {
+            font-size: 15px;
+            font-weight: 600;
+            color: #9ca3af;
+            letter-spacing: 0.3px;
+        }
+
+        .dot {
+            width: 5px;
+            height: 5px;
+            background-color: #1fb8aa;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <svg class="bg-svg" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+                    <circle cx="2" cy="2" r="1" fill="white" opacity="0.3"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#dots)" />
+        </svg>
+        
+        <div class="circle-accent"></div>
+        <div class="circle-accent-2"></div>
+
+        <div class="content-wrapper">
+            <h1 class="main-headline">
+                This moment<br />
+                <span class="highlight-teal">deserves to be celebrated</span>.
+            </h1>
+            <p class="sub-headline">
+                We throw parties for birthdays, graduations, promotions. But this quiet, internal transformation that changes your entire trajectory? There's no ceremony for it.
+            </p>
+
+            <div class="final-message">
+                <div class="final-text">
+                    Your life will have many special occasions. But this one—the moment you stop being busy and start moving forward—might be the most important one <span class="highlight-teal">nobody ever acknowledges</span>. Until now.
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="dot"></div>
+            <p class="thank-you">Stop asking "How hard are you working?" Start asking "How well is it working?"</p>
+            <div class="dot"></div>
+        </div>
+    </div>
+</body>
+</html>

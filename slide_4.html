@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Illusion of Busy Work</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Lora:ital,wght@1,400;1,600&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="./main.css" rel="stylesheet" />
+    <style>
+        .content-area {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 26px;
+            padding-top: 28px;
+            padding-bottom: 28px;
+        }
+
+        .left-col {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .panel {
+            background-color: #ffffff;
+            border-radius: 14px;
+            border: 1px solid #e5e7eb;
+            padding: 24px 22px;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+        }
+
+        .section-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            font-weight: 800;
+            color: #6b7280;
+            margin-bottom: 12px;
+        }
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: auto repeat(7, 1fr);
+            gap: 6px;
+            font-size: 11px;
+        }
+
+        .day-header {
+            background-color: #f9fafb;
+            padding: 8px 6px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 10px;
+            color: #6b7280;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .time-label {
+            padding: 6px 8px;
+            font-size: 10px;
+            color: #9ca3af;
+            font-weight: 600;
+            text-align: right;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .time-block {
+            background-color: #fef2f2;
+            border-left: 3px solid #fca5a1;
+            border-radius: 4px;
+            padding: 6px 8px;
+            font-size: 11px;
+            color: #374151;
+            line-height: 1.3;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            min-height: 32px;
+        }
+
+        .time-block.empty {
+            background-color: transparent;
+            border: none;
+        }
+
+        .time-block.class {
+            background-color: #eff6ff;
+            border-left-color: #93c5fd;
+            color: #1e40af;
+        }
+
+        .time-block.work {
+            background-color: #f3f4f6;
+            border-left-color: #9ca3af;
+            color: #4b5563;
+        }
+
+        .insight-box {
+            background-color: #f0fdfc;
+            border-radius: 12px;
+            padding: 22px;
+            border-left: 5px solid #1fb8aa;
+        }
+
+        .insight-title {
+            font-size: 16px;
+            font-weight: 800;
+            color: #0f766e;
+            margin-bottom: 10px;
+        }
+
+        .insight-text {
+            font-size: 15px;
+            color: #374151;
+            line-height: 1.5;
+        }
+
+        .legend-box {
+            padding: 16px 46px;
+        }
+
+        .legend-title {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 800;
+            color: #6b7280;
+            margin-bottom: 10px;
+        }
+
+        .legend-items {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: #4b5563;
+        }
+
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 3px;
+            border-left: 3px solid;
+        }
+
+        .legend-color.busy {
+            background-color: #fef2f2;
+            border-left-color: #fca5a1;
+        }
+
+        .legend-color.class-time {
+            background-color: #eff6ff;
+            border-left-color: #93c5fd;
+        }
+
+        .legend-color.work-time {
+            background-color: #f3f4f6;
+            border-left-color: #9ca3af;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .stat-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 14px;
+            border: 1px solid #e5e7eb;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 900;
+            color: #fca5a1;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: #6b7280;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .highlight-box {
+            background-color: #111827;
+            color: white;
+            border-radius: 14px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-box::after {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background-color: #1fb8aa;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.2;
+        }
+
+        .key-takeaway-label {
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: #1fb8aa;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .key-takeaway-label::before {
+            content: '';
+            width: 20px;
+            height: 2px;
+            background-color: #1fb8aa;
+            margin-right: 10px;
+        }
+
+        .takeaway-text {
+            font-weight: 800;
+            font-size: 26px;
+            line-height: 1.3;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .takeaway-sub {
+            font-size: 16px;
+            color: #9ca3af;
+            line-height: 1.5;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <div class="header-bar">
+            <h1 class="header-title">The Illusion: Why We Stay Busy</h1>
+        </div>
+
+        <div class="content-area">
+            <div class="left-col">
+                <div class="panel">
+                    <div class="section-title">A Week in the Life: Busy ≠ Productive</div>
+                    <div class="schedule-grid">
+                        <!-- Header Row -->
+                        <div class="time-label"></div>
+                        <div class="day-header">Mon</div>
+                        <div class="day-header">Tue</div>
+                        <div class="day-header">Wed</div>
+                        <div class="day-header">Thu</div>
+                        <div class="day-header">Fri</div>
+                        <div class="day-header">Sat</div>
+                        <div class="day-header">Sun</div>
+
+                        <!-- 9 AM -->
+                        <div class="time-label">9am</div>
+                        <div class="time-block class">Math Class</div>
+                        <div class="time-block">Rewrite Math Notes</div>
+                        <div class="time-block class">Math Class</div>
+                        <div class="time-block">Copy Math Notes</div>
+                        <div class="time-block class">Math Class</div>
+                        <div class="time-block">Organize Study Desk</div>
+                        <div class="time-block">Memorize Formulas</div>
+
+                        <!-- 11 AM -->
+                        <div class="time-label">11am</div>
+                        <div class="time-block class">Chemistry</div>
+                        <div class="time-block">Read Chem Ch.5</div>
+                        <div class="time-block class">Chemistry</div>
+                        <div class="time-block">Reread Chem Ch.5</div>
+                        <div class="time-block class">Chemistry</div>
+                        <div class="time-block">Highlight Chem Book</div>
+                        <div class="time-block">Review Chem Notes</div>
+
+                        <!-- 2 PM -->
+                        <div class="time-label">2pm</div>
+                        <div class="time-block class">English</div>
+                        <div class="time-block">Rewrite Essay Draft</div>
+                        <div class="time-block class">English</div>
+                        <div class="time-block">Polish Essay</div>
+                        <div class="time-block work">Part-time Job</div>
+                        <div class="time-block">Read English Ch.7</div>
+                        <div class="time-block">Essay Outline</div>
+
+                        <!-- 5 PM -->
+                        <div class="time-label">5pm</div>
+                        <div class="time-block class">Comms Class</div>
+                        <div class="time-block work">Part-time Job</div>
+                        <div class="time-block">Organize Planner</div>
+                        <div class="time-block work">Part-time Job</div>
+                        <div class="time-block">Comms Presentation</div>
+                        <div class="time-block">Make Flashcards</div>
+                        <div class="time-block">Practice Speech</div>
+
+                        <!-- 8 PM -->
+                        <div class="time-label">8pm</div>
+                        <div class="time-block">Redo Math HW</div>
+                        <div class="time-block">Update All Notes</div>
+                        <div class="time-block">Do Chem HW</div>
+                        <div class="time-block">Rewrite Outline</div>
+                        <div class="time-block empty"></div>
+                        <div class="time-block">Redo Flashcards</div>
+                        <div class="time-block">Review Everything</div>
+                    </div>
+
+                    <div class="legend-box">
+                        <div class="legend-items">
+                            <div class="legend-item">
+                                <div class="legend-color busy"></div>
+                                <span>Busy Work</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color class-time"></div>
+                                <span>Class Time</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color work-time"></div>
+                                <span>Part-time Job</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-grid">
+
+
+                        <div class="stat-card">
+                            <div class="stat-number">42</div>
+                            <div class="stat-label">Hours/Week</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">28</div>
+                            <div class="stat-label">Busy Work Hrs</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">0</div>
+                            <div class="stat-label">Practice Tests</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel" >
+                    <div class="section-title">The Exhaustion Loop</div>
+                    <div class="grid grid-cols-7" style="font-size: 13px; color: #374151; line-height: 1.6;">
+                        <div class="col-span-4">
+                            <div style="margin-bottom: 8px;">
+                                <strong class="highlight">1.</strong> You're tired → Must have worked hard
+                            </div>
+                            <div style="margin-bottom: 8px;">
+                                <strong class="highlight">2.</strong> Worked hard → Must have made progress
+                            </div>
+                            <div style="margin-bottom: 8px;">
+                                <strong class="highlight">3.</strong> Made progress → Right?
+                            </div>
+                        </div>
+
+                        <div class="col-span-3"
+                            style="background-color: #f0fdfc; padding: 10px; border-radius: 6px; margin-top: 12px; border-left: 3px solid #1fb8aa;">
+                            <strong class="highlight">Wrong.</strong> <span style="color: #374151;">You
+                                can run on a treadmill for hours and never leave the room.</span> <br />
+                                Hours logged ≠ concepts mastered
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-col">
+                <div class="highlight-box">
+                    <div class="key-takeaway-label">The Real Reason</div>
+                    <div class="takeaway-text">
+                        Busy work feels productive without any risk of failure.
+                    </div>
+                    <div class="takeaway-sub">
+                        You can't get the answer wrong if you're just rewriting the question. It's safe. It's
+                        measurable. But hours are easy to count. <strong>Results are harder to face.</strong>
+                    </div>
+                </div>
+
+                <div>
+
+                    <div class="panel" style="margin-top: 18px;">
+                        <div class="section-title">The Dopamine Trap</div>
+                        <div style="font-size: 14px; color: #374151; line-height: 1.5; margin-bottom: 14px;">
+                            <strong>Your brain releases dopamine</strong> every time you check off a task. The
+                            problem?
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <div
+                                style="background-color: #fef2f2; padding: 12px; border-radius: 8px; border-left: 3px solid #fca5a1;">
+                                <div style="font-size: 13px; color: #4b5563; line-height: 1.4;">
+                                    ✓ Organize desk = <strong>Dopamine hit</strong>
+                                </div>
+                            </div>
+                            <div
+                                style="background-color: #fef2f2; padding: 12px; border-radius: 8px; border-left: 3px solid #fca5a1;">
+                                <div style="font-size: 13px; color: #4b5563; line-height: 1.4;">
+                                    ✓ Finish research paper = <strong>Dopamine hit</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="font-size: 13px; color: #6b7280; margin-top: 12px; font-style: italic;">
+                            Your brain can't tell the difference. But one moves you forward. The other just feels
+                            like it does.
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

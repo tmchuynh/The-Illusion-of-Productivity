@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Uncelebrated Moment</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Lora:ital,wght@1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="./main.css" rel="stylesheet" />
+    <style>
+        .content-area {
+            flex-direction: column;
+        }
+
+        .panel {
+            background-color: #ffffff;
+            border-radius: 14px;
+            border: 1px solid #e5e7eb;
+            padding: 32px 28px;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+        }
+
+        .primary-claim {
+            border-left: 6px solid #1fb8aa;
+            border-radius: 0 12px 12px 0;
+            padding-left: 22px;
+            max-height: 90%;
+        }
+
+        .big-text {
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .subtext {
+            font-size: 19px;
+            color: #4b5563;
+            line-height: 1.55;
+            margin-bottom: 24px;
+        }
+
+        .moment-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .moment-card {
+            background-color: #f9fafb;
+            border-radius: 10px;
+            padding: 18px;
+            border: 1px solid #e5e7eb;
+            min-height: 150px;
+        }
+
+        .moment-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            font-weight: 800;
+            color: #1fb8aa;
+            margin-bottom: 8px;
+        }
+
+        .moment-text {
+            font-size: 15px;
+            color: #374151;
+            line-height: 1.45;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <div class="header-bar">
+            <h1 class="header-title">The Special Occasion We Never Celebrate</h1>
+        </div>
+
+        <div class="content-area">
+            <div class="panel primary-claim">
+                <div class="big-text">
+                    There's no graduation for it. No party. But it's<br />
+                    <span class="highlight">one of the most significant transitions</span> you'll ever make.
+                </div>
+                <div class="subtext">
+                    It's the moment you realize that <strong>time spent ≠ progress made</strong>. That being busy is not
+                    the same as being effective. That there's a fundamental difference between work that's simply
+                    work... and work that actually moves you forward.
+                </div>
+            </div>
+
+            <div class="moment-grid">
+                <div class="moment-card">
+                    <div class="moment-label">For A Select Number Of You</div>
+                    <div class="moment-text">This moment has already happened. You know exactly what I'm talking about.
+                        You've seen both sides.
+                    </div>
+                </div>
+
+                <div class="moment-card">
+                    <div class="moment-label">For Some</div>
+                    <div class="moment-text">You're in the middle of it right now, in that uncomfortable
+                        space—questioning everything you thought
+                        productivity
+                        meant. <br /><br /> Lean into that discomfort; it'll teach you more than any success ever could.
+                    </div>
+                </div>
+
+                <div class="moment-card">
+                    <div class="moment-label">For Others</div>
+                    <div class="moment-text">It's coming. And when it does, recognize it for what it is: a
+                        transformation.<br /><br /> It's not just about getting more done—it's about becoming someone
+                        different;
+                        someone more impactful in both their own life and those around them.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
