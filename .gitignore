@@ -11,3 +11,4 @@ node_modules/*
 # Optional: Uncomment to exclude original slide files
 # slide_*.html
 # build-pptx.js
+.~lock.The Illusion of Productivity.pptx#
