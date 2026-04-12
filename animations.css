@@ -43,14 +43,6 @@
   font-family: "Lora", serif;
 }
 
-/* Slide 3 - Panel styles */
-.slide-3 .panel {
-  background-color: #ffffff;
-  border-radius: 14px;
-  border: 1px solid #e5e7eb;
-  padding: 32px 28px;
-}
-
 .slide-3 .primary-claim {
   border-left: 6px solid #1fb8aa;
   border-radius: 0 12px 12px 0;
@@ -86,9 +78,6 @@
 }
 
 .slide-4 .panel {
-  background-color: #ffffff;
-  border-radius: 14px;
-  border: 1px solid #e5e7eb;
   padding: 24px 22px;
 }
 
