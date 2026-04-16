@@ -239,6 +239,22 @@ em {
   border-radius: 50%;
 }
 
+dotlottie-wc {
+  position: absolute;
+}
+
+dotlottie-wc.first-celebrate {
+  left: -40px;
+  top: 0px;
+  height: 30em;
+}
+
+dotlottie-wc.last-celebrate {
+  right: 50px;
+  bottom: 150px;
+  height: 15em;
+}
+
 /* ===========================
    HEADER
    =========================== */
