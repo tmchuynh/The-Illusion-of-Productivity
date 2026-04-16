@@ -31,6 +31,24 @@
 
 <body>
     <div class="reveal">
+        <button class="js-toggle-fullscreen-btn toggle-fullscreen-btn" aria-label="Enter fullscreen mode"
+            id="fullscreenToggle">
+            <svg class="toggle-fullscreen-svg" width="28" height="28" viewBox="-2 -2 28 28">
+                <g class="icon-fullscreen-enter">
+                    <path d="M 2 9 v -7 h 7" />
+                    <path d="M 22 9 v -7 h -7" />
+                    <path d="M 22 15 v 7 h -7" />
+                    <path d="M 2 15 v 7 h 7" />
+                </g>
+
+                <g class="icon-fullscreen-leave">
+                    <path d="M 24 17 h -7 v 7" />
+                    <path d="M 0 17 h 7 v 7" />
+                    <path d="M 0 7 h 7 v -7" />
+                    <path d="M 24 7 h -7 v -7" />
+                </g>
+            </svg>
+        </button>
         <div class="slides">
 
             <!-- Slide 1: Title Slide -->
@@ -590,6 +608,7 @@
     </div>
 
     <!-- Reveal.js Scripts -->
+    <script src="./full-screen-btn.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js"></script>
     <script>
         Reveal.initialize({

@@ -1,8 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap");
 
+@import "tailwindcss";
+
 /* ===========================
    REVEAL.JS BASE OVERRIDES
    =========================== */
+
+.reveal-viewport {
+  width: calc(1280px * 1.15);
+  height: calc(720px * 1.15);
+}
+
+/* Fullscreen mode - when .reveal is the fullscreen element */
+.reveal:fullscreen,
+.reveal:-webkit-full-screen,
+.reveal:-moz-full-screen,
+.reveal:-ms-fullscreen {
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: #000;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.reveal:fullscreen .slides,
+.reveal:-webkit-full-screen .slides,
+.reveal:-moz-full-screen .slides,
+.reveal:-ms-fullscreen .slides {
+  /* Maintain aspect ratio: 1472 / 828 ≈ 1.777 (16:9) */
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  width: auto !important;
+  height: 100vh !important;
+  aspect-ratio: 1472 / 828;
+}
+
 .reveal .slides {
   text-align: left;
 }
@@ -10,6 +43,20 @@
 .reveal .slides section {
   height: 100%;
   padding: 0;
+}
+
+.reveal .progress {
+  height: 5px;
+  border-radius: 5px;
+  background-color: var(--color-border-default);
+}
+
+.reveal .slide-number {
+  left: 1%;
+  right: auto;
+  background-color: var(--color-canvas-subtle);
+  color: var(--subtext-color);
+  font-family: "Courier New", Courier, monospace;
 }
 
 /* ===========================
@@ -22,14 +69,8 @@ body {
   overflow: hidden;
 }
 
-.slide-container {
-  width: calc(1280px * 1.15);
-  height: calc(720px * 1.15);
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
+em {
+  font-style: italic;
 }
 
 /* Commented out originally - keeping for reference
@@ -45,6 +86,24 @@ body {
 /* ===========================
    CONTENT WRAPPERS
    =========================== */
+
+.slide-container {
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.reveal:fullscreen .slide-container,
+.reveal:-webkit-full-screen .slide-container,
+.reveal:-moz-full-screen .slide-container,
+.reveal:-ms-fullscreen .slide-container {
+  width: 100%;
+  height: 100%;
+}
+
 .content-wrapper {
   flex: 1;
   display: flex;
@@ -53,6 +112,35 @@ body {
   padding-left: 120px;
   padding-right: 80px;
   z-index: 20;
+}
+
+.content-area {
+  flex: 1;
+  padding: 40px 80px;
+  display: flex;
+  gap: 40px;
+  background-color: #fcfcfc;
+}
+
+.panel {
+  background-color: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  padding: 32px 28px;
+}
+
+.left-panel {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.right-panel {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* ===========================
@@ -133,8 +221,16 @@ body {
   pointer-events: none;
 }
 
+/* FOOTER  */
+.dot {
+  width: 5px;
+  height: 5px;
+  background-color: #1fb8aa;
+  border-radius: 50%;
+}
+
 /* ===========================
-   HEADER & CONTENT AREAS
+   HEADER
    =========================== */
 .header-bar {
   height: 100px;
@@ -151,38 +247,6 @@ body {
   font-weight: 800;
   color: #111827;
   letter-spacing: -0.5px;
-}
-
-.content-area {
-  flex: 1;
-  padding: 40px 80px;
-  display: flex;
-  gap: 40px;
-  background-color: #fcfcfc;
-}
-
-.left-panel {
-  flex: 5;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-.right-panel {
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* ===========================
-   SHARED PANEL STYLES
-   =========================== */
-.panel {
-  background-color: #ffffff;
-  border-radius: 14px;
-  border: 1px solid #e5e7eb;
-  padding: 32px 28px;
 }
 
 /* ===========================
@@ -247,9 +311,78 @@ body {
   letter-spacing: 0.3px;
 }
 
-.dot {
-  width: 5px;
-  height: 5px;
-  background-color: #1fb8aa;
-  border-radius: 50%;
+/* ===========================
+   TOGGLE FULLSCREEN BUTTON
+   =========================== */
+
+.toggle-fullscreen-btn {
+  position: absolute;
+  z-index: 10000;
+  top: 10px;
+  right: 10px;
+  border: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Position button when .reveal is fullscreen */
+.reveal:fullscreen .toggle-fullscreen-btn,
+.reveal:-webkit-full-screen .toggle-fullscreen-btn,
+.reveal:-moz-full-screen .toggle-fullscreen-btn,
+.reveal:-ms-fullscreen .toggle-fullscreen-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.toggle-fullscreen-svg {
+  display: block;
+  height: auto;
+}
+
+.toggle-fullscreen-svg path {
+  transform-box: view-box;
+  transform-origin: 12px 12px;
+  fill: none;
+  stroke: hsl(225, 10%, 8%);
+  stroke-width: 4;
+  transition: 0.25s;
+}
+
+/* White button in fullscreen mode */
+.reveal:fullscreen .toggle-fullscreen-svg path,
+.reveal:-webkit-full-screen .toggle-fullscreen-svg path,
+.reveal:-moz-full-screen .toggle-fullscreen-svg path,
+.reveal:-ms-fullscreen .toggle-fullscreen-svg path {
+  stroke: #ffffff;
+}
+
+.toggle-fullscreen-btn:hover path:nth-child(1),
+.toggle-fullscreen-btn:focus path:nth-child(1) {
+  transform: translate(-2px, -2px);
+}
+
+.toggle-fullscreen-btn:hover path:nth-child(2),
+.toggle-fullscreen-btn:focus path:nth-child(2) {
+  transform: translate(2px, -2px);
+}
+
+.toggle-fullscreen-btn:hover path:nth-child(3),
+.toggle-fullscreen-btn:focus path:nth-child(3) {
+  transform: translate(2px, 2px);
+}
+
+.toggle-fullscreen-btn:hover path:nth-child(4),
+.toggle-fullscreen-btn:focus path:nth-child(4) {
+  transform: translate(-2px, 2px);
+}
+
+.toggle-fullscreen-btn:not(.on) .icon-fullscreen-leave {
+  display: none;
+}
+
+.toggle-fullscreen-btn.on .icon-fullscreen-enter {
+  display: none;
 }
