@@ -34,14 +34,14 @@
 
 .slide-6 .inner-wrap .grid > div {
   background-color: rgba(31, 41, 55, 0.7);
-  border: 1px solid rgba(94, 234, 212, 0.2);
+  border: 1px solid var(--dark-greyed-highlight);
   border-radius: 12px;
   padding: 18px 22px;
   backdrop-filter: blur(10px);
 }
 
 .slide-6 .inner-wrap .grid .h-12 {
-  background-color: oklch(71.08% 0.12717 182.261 / 0.342);
+  background-color: var(--dark-highlight);
   color: #f9ffff;
   font-size: 14px;
   font-weight: 600;

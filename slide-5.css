@@ -49,7 +49,8 @@
   border-radius: 14px;
   background-color: rgba(31, 41, 55, 0.7);
   padding: 20px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr auto 5fr;
   align-items: center;
   gap: 14px;
 }
@@ -57,7 +58,7 @@
 .slide-5 .comparison-label {
   font-size: 11px;
   font-weight: 800;
-  color: #5eead4;
+  color: var(--highlight);
   text-transform: uppercase;
   letter-spacing: 1.4px;
   margin-bottom: 4px;
@@ -77,7 +78,7 @@
 }
 
 .slide-5 .arrow-icon {
-  color: #5eead4;
+  color: #9ea1a7cc;
   font-size: 18px;
   flex-shrink: 0;
 }

@@ -2,6 +2,16 @@
 
 @import "tailwindcss";
 
+:root {
+  --color-border-default: #b8e9e4;
+  --baby-green: #f0fdfc;
+  --highlight: #1fb8aa;
+  --dark-greyed-highlight: rgba(94, 234, 212, 0.2);
+  --dark-highlight: #0f766e;
+  --mid-highlight: oklch(58.929% 0.10541 182.285);
+  --bright-green: #5eead4;
+}
+
 /* ===========================
    REVEAL.JS BASE OVERRIDES
    =========================== */
@@ -276,7 +286,7 @@ em {
   font-size: 12px;
   letter-spacing: 2px;
   font-weight: 700;
-  color: #1fb8aa;
+  color: var(--highlight);
   margin-bottom: 16px;
   display: flex;
   align-items: center;
@@ -288,7 +298,7 @@ em {
   content: "";
   width: 20px;
   height: 2px;
-  background-color: #1fb8aa;
+  background-color: var(--highlight);
   margin-right: 10px;
 }
 
@@ -319,7 +329,7 @@ em {
   position: absolute;
   z-index: 10000;
   top: 10px;
-  right: 10px;
+  right: 15px;
   border: 0;
   padding: 0;
   background: none;
