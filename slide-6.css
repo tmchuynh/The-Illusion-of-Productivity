@@ -45,7 +45,7 @@
   color: #f9ffff;
   font-size: 14px;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 6px 12px;
 }
 
@@ -61,7 +61,7 @@
 }
 
 .slide-6 .headline {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Faculty Glyphic", sans-serif;
   font-size: 46px;
   font-weight: 700;
   color: var(--color-canvas-subtle);

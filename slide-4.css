@@ -34,7 +34,7 @@
   display: grid;
   grid-template-columns: auto repeat(7, 1fr);
   gap: 6px;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .slide-4 .day-header {
@@ -42,7 +42,7 @@
   padding: 8px 6px;
   text-align: center;
   font-weight: 700;
-  font-size: 10px;
+  font-size: 13px;
   color: #6b7280;
   border-radius: 6px;
   text-transform: uppercase;
@@ -51,7 +51,7 @@
 
 .slide-4 .time-label {
   padding: 6px 8px;
-  font-size: 10px;
+  font-size: 12px;
   color: var(--light-grey);
   font-weight: 600;
   text-align: right;
@@ -63,15 +63,13 @@
 .slide-4 .time-block {
   background-color: #fff2f2;
   border-left: 3px solid #d86c6c;
+  color: #8f0f0f;
   border-radius: 4px;
   padding: 8px;
-  font-size: 11px;
-  color: var(--subtext-color);
+  font-size: 13px;
   line-height: 1.3;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  min-height: 4.25em;
+  font-weight: 600;
+  min-height: 4em;
 }
 
 .slide-4 .time-block.empty {
@@ -126,59 +124,4 @@
   letter-spacing: 0.8px;
   color: var(--light-grey);
   font-weight: 700;
-}
-
-.slide-4 .legend-items {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.slide-4 .legend-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12px;
-  color: #4b5563;
-}
-
-.slide-4 .legend-color {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  border-left: 3px solid;
-}
-
-.slide-4 .legend-color.busy {
-  background-color: #fff2f2;
-  border-left-color: #d86c6c;
-}
-
-.slide-4 .legend-color.class-time {
-  background-color: #eefdff;
-  border-left-color: #0f96a8;
-}
-
-.slide-4 .legend-color.free-time {
-  background-color: #eafffd;
-  border-left-color: #1f9187;
-}
-
-.slide-4 .legend-color.work-time {
-  background-color: #f8f8f8;
-  border-left-color: #b1b5bb;
-}
-
-/* Highlight box pseudo-elements */
-.highlight-box-glow::after {
-  content: "";
-  position: absolute;
-  top: -50px;
-  right: -50px;
-  width: 200px;
-  height: 200px;
-  background-color: #1fb8aa;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.2;
 }

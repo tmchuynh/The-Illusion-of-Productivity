@@ -2,7 +2,7 @@
   background-color: var(--green-background);
   border-radius: 12px;
   padding: 25px 22px 10px 22px;
-  border-left: 5px solid var(--dark-highlight);
+  border-left: 0.4em solid var(--dark-highlight);
 }
 
 .slide-9 .insight-box.key {
@@ -11,9 +11,10 @@
 
 .slide-9 .insight-title {
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 900;
   color: var(--dark-highlight);
   margin-bottom: 10px;
+  font-family: "Faculty Glyphic", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1.2px;
 }
@@ -49,4 +50,18 @@
 .slide-9 .strategy-list p:nth-child(3n + 3) {
   color: #000;
   font-weight: 600;
+}
+
+
+.highlight-box-glow::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background-color: #1fb8aa;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.2;
 }

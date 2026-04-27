@@ -45,14 +45,18 @@
 .slide-5 .comparison-row {
   position: relative;
   z-index: 10;
-  border: 1px solid rgba(255, 255, 255, 0.11);
-  border-radius: 14px;
+  border: 1px solid oklch(100% 0.00011 271.152 / 0.11);
+  border-radius: 10px;
   background-color: rgba(31, 41, 55, 0.7);
   padding: 20px;
   display: grid;
   grid-template-columns: 3fr auto 5fr;
   align-items: center;
   gap: 14px;
+}
+
+.slide-5 .quote-body {
+  border: 1px solid var(--card-border);
 }
 
 .slide-5 .comparison-label {

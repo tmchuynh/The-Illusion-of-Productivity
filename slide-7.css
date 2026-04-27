@@ -19,7 +19,7 @@
 }
 
 .slide-7 .main-headline {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Faculty Glyphic", sans-serif;
   font-size: 64px;
   font-weight: 700;
   line-height: 1.05;
@@ -29,7 +29,7 @@
 }
 
 .slide-7 .sub-headline {
-  font-family: "Lora", serif;
+  font-family: "Jost", sans-serif;
   font-size: 24px;
   font-weight: 400;
   font-style: italic;
@@ -52,7 +52,7 @@
 .slide-7 .pivot-box {
   background-color: rgba(31, 41, 55, 0.7);
   border: 1px solid rgba(94, 234, 212, 0.2);
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 18px 22px;
   backdrop-filter: blur(10px);
 }
@@ -76,7 +76,7 @@
 .slide-7 .final-cta {
   background-color: rgba(31, 41, 55, 0.9);
   border: 1px solid rgba(94, 234, 212, 0.3);
-  border-radius: 16px;
+  border-radius: 10px;
   padding: 20px 32px;
   width: 100%;
   max-width: 1100px;
