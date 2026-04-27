@@ -1,0 +1,52 @@
+.slide-9 .insight-box {
+  background-color: var(--green-background);
+  border-radius: 12px;
+  padding: 25px 22px 10px 22px;
+  border-left: 5px solid var(--dark-highlight);
+}
+
+.slide-9 .insight-box.key {
+  padding: 25px 22px 30px 22px;
+}
+
+.slide-9 .insight-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--dark-highlight);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.slide-9 .insight-text {
+  font-size: 15px;
+  color: var(--subtext-color);
+  line-height: 1.5;
+}
+
+.slide-9 .content-area {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  gap: 20px;
+}
+
+.slide-9 .panel {
+  border: none;
+}
+
+.slide-9 .strategy-list p {
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: var(--subtext-color);
+  line-height: 1.4;
+}
+
+.slide-9 .strategy-list p:nth-child(3n + 2) {
+  color: var(--mid-highlight);
+  font-weight: 600;
+}
+
+.slide-9 .strategy-list p:nth-child(3n + 3) {
+  color: #000;
+  font-weight: 600;
+}
