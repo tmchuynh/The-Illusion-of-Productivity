@@ -2,21 +2,43 @@
    SLIDE 3: PANEL STYLES
    =========================== */
 
-.slide-3 .primary-claim {
-  border-left: 6px solid #1fb8aa;
-  border-radius: 0 12px 12px 0;
-  padding-left: 22px;
+.slide-3 .slide-container,
+.slide-3 .header-bar,
+.slide-3 .content-area,
+.slide-3 .panel {
+  background-color: var(--dark-background);
+  position: relative;
+  color: var(--background);
+}
+
+.slide-3 .header-title {
+  color: var(--background);
+}
+
+.slide-3 .primary-claim,
+.slide-8 .primary-claim {
+  border-radius: 10px;
   max-height: 90%;
 }
 
-.slide-3 .big-text {
+.slide-8 .primary-claim {
+  border-left: none;
+  border-left: 0.5em solid oklch(70.622% 0.11933 185.044);
+  padding-left: 22px;
+}
+
+.slide-3 .big-text,
+.slide-8 .big-text {
   margin-bottom: 16px;
   line-height: 1.4;
 }
 
-.slide-3 .subtext {
+.slide-3 .subtext,
+.slide-8 .subtext {
   font-size: 19px;
-  color: #4b5563;
   line-height: 1.55;
-  margin-bottom: 24px;
+}
+
+.slide-3 .subtext {
+  color: var(--muted);
 }

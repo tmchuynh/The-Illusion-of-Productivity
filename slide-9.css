@@ -7,6 +7,7 @@
 
 .slide-9 .insight-box.key {
   padding: 25px 22px 30px 22px;
+  border-left: 0.4em solid var(--dark-highlight);
 }
 
 .slide-9 .insight-title {
@@ -43,7 +44,7 @@
 }
 
 .slide-9 .strategy-list p:nth-child(3n + 2) {
-  color: var(--mid-highlight);
+  color: var(--subtext-color);
   font-weight: 600;
 }
 

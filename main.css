@@ -196,8 +196,9 @@ p {
 }
 
 .font-nautigal-bold {
-  font-family: "The Nautigal", cursive;
-  font-weight: 700;
+ font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* ===========================

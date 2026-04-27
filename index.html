@@ -13,7 +13,7 @@
     <!-- External Dependencies -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=The+Nautigal:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -143,7 +143,7 @@
                                 data-fragment-index="5">
                                 <div
                                     class="flex items-center justify-center bg-teal-50 rounded-full h-16 w-16 shrink-0">
-                                    <i class="text-4xl text-teal-500 fas fa-lightbulb"></i>
+                                    <i class="text-4xl dark-highlight fas fa-lightbulb"></i>
                                 </div>
                                 <div>
                                     <h3 class="mb-2 font-bold text-2xl text-gray-900">Something Isn't "Clicking"</h3>
@@ -259,29 +259,6 @@
                                 </div>
                             </div>
 
-                            <div style="padding: 16px 46px;">
-                                <div
-                                    style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 800; color: #6b7280; margin-bottom: 10px;">
-                                    Legend</div>
-                                <div class="legend-items">
-                                    <div class="legend-item">
-                                        <div class="legend-color busy"></div>
-                                        <span>Busy Work</span>
-                                    </div>
-                                    <div class="legend-item">
-                                        <div class="legend-color class-time"></div>
-                                        <span>Class Time</span>
-                                    </div>
-                                    <div class="legend-item">
-                                        <div class="legend-color work-time"></div>
-                                        <span>Part-time Job</span>
-                                    </div>
-                                    <div class="legend-item">
-                                        <div class="legend-color free-time"></div>
-                                        <span>Free Time</span>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -294,8 +271,8 @@
                     </div>
                     <div class="content-area">
                         <div class="flex flex-col gap-5">
-                            <div class="relative flex flex-col justify-center bg-gray-900 shadow-md p-8 rounded-2xl h-full text-white overflow-hidden highlight-box-glow fragment fade-in"
-                                data-fragment-index="2">
+                            <div
+                                class="relative flex flex-col justify-center bg-gray-900 shadow-md p-8 rounded-2xl h-full text-white overflow-hidden highlight-box-glow">
                                 <div
                                     class="relative z-10 flex items-center mb-4 font-bold text-xs tracking-wider uppercase key-takeaway-line">
                                     The Real Reason</div>
@@ -310,7 +287,7 @@
                                 </div>
                             </div>
 
-                            <div class="shadow-md insight-box key fragment fade-in" data-fragment-index="3">
+                            <div class="shadow-md insight-box panel key fragment fade-in" data-fragment-index="3">
                                 <div class="insight-title">The Key Insight</div>
                                 <div class="insight-text">The more you look at it, the more you realize: this schedule
                                     is
@@ -324,8 +301,8 @@
                             <div class="relative">
                                 <div class="absolute left-0 right-0 top-0 bg-red-background shadow-md insight-box panel fragment fade-in"
                                     data-fragment-index="4"
-                                   style="background-color: #fef2f2; border-left: 4px solid #fca5a1;">
-                                    <div class="insight-title" style="color: #4b5563; ">
+                                    style="background-color: #fef2f2; border-left: 0.4em solid #e47b76;">
+                                    <div class="insight-title" style="color: var( --dark-red-highlight); ">
                                         The Dopamine Trap</div>
                                     <div class="insight-text">
                                         <strong>Your brain releases dopamine</strong> every time you check off a task.
@@ -371,7 +348,7 @@
                             </div>
 
                             <div class="absolute bottom-0 left-0 right-0 shadow-md panel strategy-list align-center fragment fade-up"
-                                    data-fragment-index="5">
+                                data-fragment-index="5">
                                 <div class="pb-3 insight-title">The Lessons They Were Trying to Teach</div>
                                 <div class="gap-4 grid grid-cols-4">
                                     <p>Pomodoro Technique</p>
@@ -423,8 +400,8 @@
                             </div>
                         </div>
 
-                        <div class="gap-9 grid grid-cols-3">
-                            <div class="shadow-md rounded-xl min-h-37.5 fragment fade-up" data-fragment-index="2">
+                        <div class="gap-4 grid grid-cols-3 -mt-3">
+                            <div class="shadow-md rounded-xl min-h-37.5 panel fragment fade-up" data-fragment-index="2">
                                 <div class="mb-2 font-extrabold text-md text-teal-600 tracking-widest uppercase">For A
                                     Select Number Of You</div>
                                 <div class="font-semibold leading-tight text-gray-700 text-md">This moment has already
@@ -436,7 +413,7 @@
                                 </div>
                             </div>
 
-                            <div class="shadow-md rounded-lg min-h-37.5 fragment fade-up" data-fragment-index="3">
+                            <div class="shadow-md rounded-lg min-h-37.5 panel fragment fade-up" data-fragment-index="3">
                                 <div class="mb-2 font-extrabold text-md text-teal-600 tracking-widest uppercase">For
                                     Some</div>
                                 <div class="font-semibold leading-tight text-gray-700 text-md">You're in the middle of
@@ -448,7 +425,7 @@
                                 </div>
                             </div>
 
-                            <div class="shadow-md rounded-lg min-h-37.5 fragment fade-up" data-fragment-index="4">
+                            <div class="shadow-md rounded-lg min-h-37.5 panel fragment fade-up" data-fragment-index="4">
                                 <div class="mb-2 font-extrabold text-md text-teal-600 tracking-widest uppercase">For
                                     Others</div>
                                 <div class="font-semibold leading-tight text-gray-700 text-md">It's coming. And when it
@@ -485,94 +462,107 @@
                             </div>
                         </div>
 
-                        <div class="gap-4 grid grid-cols-2">
-                            <div class="bg-white shadow-md p-5 rounded-lg min-h-37.5 fragment fade-in"
+                        <div class="gap-4 grid grid-cols-2 -mt-3">
+                            <div class="relative bg-white shadow-md rounded-lg h-40 fragment fade-up panel"
                                 data-fragment-index="2">
-                                <div class="mb-2 font-extrabold text-md text-teal-500 tracking-widest uppercase">...in
-                                    Perspective</div>
-                                <div class="leading-tight text-gray-700 text-md">You start asking
-                                    different
-                                    questions. You start valuing different
-                                    things. You start seeing failure as feedback instead of something to avoid. You
-                                    start
-                                    defining success differently.
+                                <div class="absolute left-6 top-6 px-2">
+                                    <div class="mb-2 font-extrabold text-md text-teal-500 tracking-widest uppercase">
+                                        ...in
+                                        <span class="font-nautigal-bold text-3xl">Perspective</span></div>
+                                    <div class="leading-tight text-gray-700 text-md">You start asking
+                                        different
+                                        questions. You start valuing different
+                                        things. You start seeing failure as feedback instead of something to avoid. You
+                                        start
+                                        defining success differently.
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white shadow-md p-5 rounded-lg min-h-37.5 fragment fade-in"
+                            <div class="relative bg-white shadow-md rounded-lg h-40 fragment fade-up panel"
                                 data-fragment-index="3">
-                                <div class="mb-2 font-extrabold text-md text-teal-500 tracking-widest uppercase">...in
-                                    Identity</div>
-                                <div class="leading-tight text-gray-700 text-md">You stop identifying as
-                                    someone who works hard and start identifying as
-                                    someone who produces results. You stop being someone who tries and start being
-                                    someone
-                                    who does.
+                                <div class="absolute left-6 top-6 px-2">
+                                    <div class="mb-2 font-extrabold text-md text-teal-500 tracking-widest uppercase">
+                                        ...in
+                                        <span class="font-nautigal-bold text-3xl">Identity</span>
+                                    </div>
+                                    <div class="leading-tight text-gray-700 text-md">You stop identifying as
+                                        someone who works hard and start identifying as
+                                        someone who produces results. You stop being someone who tries and start being
+                                        someone
+                                        who does.
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white shadow-md p-5 rounded-lg min-h-37.5 fragment fade-in"
+                            <div class="relative bg-white shadow-md rounded-lg h-40 fragment fade-up panel"
                                 data-fragment-index="4">
-                                <div class="mb-2 font-extrabold text-md text-teal-500 tracking-widest uppercase">...in
-                                    Growth</div>
-                                <div class="leading-tight text-gray-700 text-md">You stop growing through
-                                    effort alone and start growing through
-                                    results. You stop learning from the process and start learning from the outcomes.
+                                <div class="absolute left-6 top-6 px-2">
+                                    <div class="mb-2 font-extrabold text-md text-teal-500 tracking-widest uppercase">
+                                        ...in
+                                        <span class="font-nautigal-bold text-3xl">Growth</span></div>
+                                    <div class="leading-tight text-gray-700 text-md">You stop growing through
+                                        effort alone and start growing through
+                                        results. You stop learning from the process and start learning from the
+                                        outcomes.
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="bg-white shadow-md p-5 rounded-lg min-h-37.5 fragment fade-in"
+                            <div class="relative bg-white shadow-md rounded-lg h-40 fragment fade-up panel"
                                 data-fragment-index="5">
-                                <div class="mb-2 font-extrabold text-teal-500 text-xs tracking-widest uppercase">It's a
-                                    Shift in Progress</div>
-                                <div class="font-semibold leading-tight text-gray-700 text-sm">You stop measuring
-                                    progress by how much you do and start measuring it by how much you get done. You
-                                    stop
-                                    celebrating effort and start celebrating results.
+                                <div class="absolute left-6 top-6 px-2">
+                                    <div class="mb-2 font-extrabold text-md text-teal-500 tracking-widest uppercase">
+                                        ...in
+                                        <span class="font-nautigal-bold text-3xl">Progress</span></div>
+                                    <div class="leading-tight text-gray-700 text-md">You stop measuring
+                                        progress by how much you do and start measuring it by how much you get done. You
+                                        stop
+                                        celebrating effort and start celebrating results.
+                                    </div>
                                 </div>
                             </div>
                         </div>
             </section>
-
-
-
 
             <!-- Slide 5: The Turning Point -->
             <section class="slide-5">
                 <div class="slide-container">
                     <div class="flex flex-col gap-6 justify-center bg-white px-16 py-16 w-1/2">
                         <div class="flex flex-col gap-3">
-                            <div class="font-extrabold text-teal-500 text-xs tracking-widest uppercase"
+                            <div class="font-extrabold text-xs tracking-widest uppercase dark-highlight"
                                 data-fragment-index="1">The
                                 Turning Point</div>
-                            <div class="max-w-xl font-bold font-space-grotesk leading-tight text-5xl text-gray-900 tracking-tight"
+                            <h3 class="max-w-xl font-bold font-space-grotesk leading-tight text-5xl text-gray-900 tracking-tight"
                                 data-fragment-index="1">
-                                And then, one day, something <span class="highlight">shifts</span>.
-                            </div>
+                                One day, <br /> everything will <span class="highlight">shift</span>
+                            </h3>
                         </div>
-                        <div class="flex flex-col gap-2 max-w-xl leading-relaxed text-base text-gray-600 fragment fade-in"
+                        <div class="flex flex-col gap-2 max-w-xl leading-relaxed text-md fragment fade-in"
                             data-fragment-index="2">
                             <p> The questions you ask yourself change. The way you spend your time changes. Your comfort
-                                zone shifts. Your identity shifts. <strong>Everything changes.</strong></p>
+                                zone shifts. Your identity shifts. </p>
                             <p> Maybe it happens after you fail an exam you studied "so hard" for. Maybe when you watch
-                                someone else succeed while putting in half the hours. Or maybe when you finally stop and
+                                someone else succeed while putting in half the hours you did. Or maybe when you finally
+                                stop and
                                 ask
                                 yourself:</p>
-                            <p style="color: #1fb8aa; font-size: 19px; font-weight: 600;">What am I actually
+                            <p class="mt-3 font-extrabold text-2xl uppercase primary fragment fade-in"
+                                data-fragment-index="3">What am I actually
                                 doing?</p>
                         </div>
 
 
-                        <div class="flex flex-col gap-4 shadow-md p-5 rounded-xl quote-body fragment fade-in"
-                            data-fragment-index="4" style="background-color: #f0fdfc; ">
-                            <p style="color: #0f766e;" class="font-bold">Here's the thing:</p>
+                        <div class="flex flex-col gap-4 shadow-md p-5 rounded-xl panel fragment fade-in"
+                            data-fragment-index="4">
+                            <strong class="uppercase">Here's the thing:</strong>
                             <p> I can't tell you how to get there. I can't give you a step-by-step guide to make it
                                 happen.
                                 One day, you'll either look back and realize you've already passed that point in your
                                 life—that the shift already happened—or you'll be <strong>extremely lucky</strong> to
                                 recognize it while it's occurring.</p>
-                            <p style="color: #0f766e;" class="font-bold">But when it does, you'll know. Everything
-                                changes.</p>
+                            <strong>But when it does, you'll know. Everything
+                                changes.</strong>
                         </div>
                     </div>
 
@@ -657,47 +647,51 @@
                         </p>
 
                         <div class="gap-5 grid grid-cols-2">
-                            <div class="flex flex-col gap-3 fragment fade-in" data-fragment-index="3">
+                            <div class="flex flex-col gap-3 fragment fade-up" data-fragment-index="3">
                                 <div class="flex items-center justify-center rounded-full h-12 w-12">
                                     <i class="text-2xl text-teal-300 fas fa-clock"></i>
                                 </div>
                                 <div class="border border-(--dark-highlight) font-bold text-gray-50 text-xl">How You
                                     Value Time</div>
-                                <div class="leading-relaxed text-gray-400 text-sm">
-                                    Your time becomes <strong>precious, finite, not to be wasted</strong> on activities
+                                <div class="leading-relaxed text-gray-400 text-md">
+                                    Your time becomes <strong>precious, finite, <u>not to be wasted</u></strong> on
+                                    activities
                                     that don't move you forward. You start protecting your energy for what matters.
                                 </div>
                             </div>
 
-                            <div class="flex flex-col gap-3 fragment fade-in" data-fragment-index="4">
+                            <div class="flex flex-col gap-3 fragment fade-up" data-fragment-index="4">
                                 <div class="flex items-center justify-center rounded-full h-12 w-12">
                                     <i class="text-2xl text-teal-300 fas fa-trophy"></i>
                                 </div>
                                 <div class="font-bold text-gray-50 text-xl">How You Define Success</div>
-                                <div class="leading-relaxed text-gray-400 text-sm">
-                                    Success becomes about <strong>growth achieved, not hours logged</strong>. You stop
+                                <div class="leading-relaxed text-gray-400 text-md">
+                                    Success becomes about <strong><u>growth achieved</u>, not hours logged</strong>. You
+                                    stop
                                     celebrating effort without results and start celebrating actual progress.
                                 </div>
                             </div>
 
-                            <div class="flex flex-col gap-3 fragment fade-in" data-fragment-index="5">
+                            <div class="flex flex-col gap-3 fragment fade-up" data-fragment-index="5">
                                 <div class="flex items-center justify-center rounded-full h-12 w-12">
                                     <i class="text-2xl text-teal-300 fas fa-chart-line"></i>
                                 </div>
                                 <div class="font-bold text-gray-50 text-xl">How You See Failure</div>
-                                <div class="leading-relaxed text-gray-400 text-sm">
-                                    Failure transforms from something to avoid into <strong>valuable feedback</strong>.
+                                <div class="leading-relaxed text-gray-400 text-md">
+                                    Failure transforms from something to avoid into <strong><u>valuable</u>
+                                        feedback</strong>.
                                     You embrace discomfort because that's where real growth happens.
                                 </div>
                             </div>
 
-                            <div class="flex flex-col gap-3 fragment fade-in" data-fragment-index="6">
+                            <div class="flex flex-col gap-3 fragment fade-up" data-fragment-index="6">
                                 <div class="flex items-center justify-center rounded-full h-12 w-12">
                                     <i class="text-2xl text-teal-300 fas fa-eye"></i>
                                 </div>
                                 <div class="font-bold text-gray-50 text-xl">What You See Everywhere</div>
-                                <div class="leading-relaxed text-gray-400 text-sm">
-                                    Once you have it, <strong>you can't unknow it</strong>. You'll see colleagues
+                                <div class="leading-relaxed text-gray-400 text-md">
+                                    Once you have it, <strong><u>you can't unlearn it</u></strong>. You'll see
+                                    colleagues
                                     staying late but producing little. Meetings that go nowhere. People posting about
                                     hustle but never showing results.
                                 </div>
@@ -764,9 +758,6 @@
                     </div>
                 </div>
             </section>
-
-
-
 
         </div>
     </div>
