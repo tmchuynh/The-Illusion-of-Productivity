@@ -3,7 +3,7 @@
    =========================== */
 
 .slide-6 .slide-container {
-  background-color: #111827;
+  background-color: var(--dark-subtext-color);
   position: relative;
 }
 
@@ -54,7 +54,7 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2.4px;
-  color: #5eead4;
+  color: var(--bright-green);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -64,18 +64,18 @@
   font-family: "Space Grotesk", sans-serif;
   font-size: 46px;
   font-weight: 700;
-  color: #f9fafb;
+  color: var(--color-canvas-subtle);
   line-height: 1.05;
   letter-spacing: -1.4px;
 }
 
 .slide-6 .headline .accent {
-  color: #5eead4;
+  color: var(--bright-green);
 }
 
 .slide-6 .subhead {
   font-size: 19px;
-  color: #9ca3af;
+  color: var(--light-grey);
   max-width: 900px;
   line-height: 1.5;
 }
