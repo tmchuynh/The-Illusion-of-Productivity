@@ -3,14 +3,14 @@
    =========================== */
 
 .slide-1 .slide-container {
-  background-color: #111827;
+  background-color: var(--dark-subtext-color);
 }
 
 .slide-1 .main-title {
   font-size: 96px;
   font-weight: 900;
   line-height: 1.1;
-  color: #f9fafb;
+  color: var(--color-canvas-default);
   letter-spacing: -2px;
   margin-bottom: 24px;
 }
@@ -18,7 +18,7 @@
 .slide-1 .subtitle {
   font-size: 32px;
   font-weight: 400;
-  color: #9ca3af;
+  color: var(--light-grey);
   line-height: 1.4;
   max-width: 900px;
   margin-bottom: 60px;
